@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copper Coast Air Rally — a flight game</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; background: #0a1420; height: 100%;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  body {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 100vh; color: #eaf4fb;
+  }
+  #wrap { width: 1280px; max-width: 100vw; }
+  canvas {
+    display: block; width: 1280px; max-width: 100vw; height: auto;
+    background: #2e6db4; cursor: crosshair; border-radius: 6px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55);
+  }
+  #help {
+    width: 1280px; max-width: 100vw; box-sizing: border-box;
+    padding: 10px 4px 0; font-size: 14px; color: #9db8cc;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  #help b { color: #ffb347; font-weight: 600; }
+  #help span { white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720" aria-label="Copper Coast Air Rally flight game"></canvas>
+  <div id="help">
+    <span><b>← → / A D</b> bank &amp; turn</span>
+    <span><b>↑ ↓ / W S</b> pitch</span>
+    <span><b>SHIFT / CTRL</b> throttle</span>
+    <span><b>Mouse</b> steer</span>
+    <span><b>1 / 2 / 3</b> choose a sortie</span>
+    <span><b>P</b> pause &nbsp; <b>R</b> restart &nbsp; <b>M</b> sound</span>
+  </div>
+</div>
+<script src="src/config.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/input.js"></script>
+<script src="src/terrain.js"></script>
+<script src="src/plane.js"></script>
+<script src="src/rings.js"></script>
+<script src="src/hud.js"></script>
+<script src="src/shots.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
